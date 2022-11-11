@@ -1,0 +1,18 @@
+<h1  > {{nam}}  {{ person }} </h1>
+<form [formGroup]="okForm" (ngSubmit)="onSubmit()">
+
+<label for="Id">Id : </label>
+<input type="text"    formControlName="id"   id="Id"  placeholder="enter id" ><br><br>
+
+<label for="password">Password: </label>
+<input type="password"  formControlName="pwd"  id="password" placeholder="password" ><br>
+<span style="color:red;" *ngIf="pwd && pwd.invalid && pwd.touched">*Enter a valid password</span><br>
+
+<button >Submit</button> 
+<button (click)="setClr()" >Clear</button> 
+</form>
+
+<!-- <div class="eligible">
+<div *ngIf= "val>18 else noteligible">Eligible for the registration</div>
+<ng-template #noteligible>Not Eligible for the registration</ng-template>
+</div> -->
