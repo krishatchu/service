@@ -1,0 +1,22 @@
+<div>
+
+<form [formGroup]="registerForm">
+      <label for="name">Name : </label>
+      <input type="text" id="name " placeholder="" formControlName="name"><br><br>
+
+      <label for="dob">DoB : </label>
+      <input type="date" id="dob " placeholder="dob" formControlName="dob"><br><br>
+
+      <label for="email">E-mail : </label>
+      <input type="email" id="email " placeholder="email" formControlName="email"><br><br>
+
+      <label for="mobile">mobile : </label>
+      <input type="number" id="mobile " placeholder="mobile" formControlName="mobile"><br><br>
+
+      
+      <button (click)="ok()">Submit</button>
+</form>
+
+
+</div>
+<app-child  [childData]="parentData" ></app-child>
